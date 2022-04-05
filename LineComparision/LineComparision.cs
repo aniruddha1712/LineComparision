@@ -12,33 +12,23 @@ namespace LineComparision
         {
             Console.WriteLine("Welcome to Line Comparision Program");
 
-            double x1, x2, y1, y2, lengthOfLine1, lengthOfLine2;
-            Console.WriteLine("Enter x1 co-ordinate of line1 :");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter y1 co-ordinate of line1 :");
-            y1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter x2 co-ordinate of line1 :");
-            x2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter y2 co-ordinate of line1 :");
-            y2 = Convert.ToDouble(Console.ReadLine());
+            LineCoordinate firstLine = new LineCoordinate();
+            LineCoordinate secondLine = new LineCoordinate();
+            
 
-            lengthOfLine1 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            Console.WriteLine("length of first line is:{0}", lengthOfLine1);
+            Console.WriteLine("For Line:1");
+            firstLine.Coordinate();
+            double lengthOfLine1 = firstLine.GetLength();
+            Console.WriteLine("Length of line1 is {0}", lengthOfLine1);
 
-            Console.WriteLine("Enter x1 co-ordinate of line2 :");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter y1 co-ordinate of line2 :");
-            y1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter x2 co-ordinate of line2 :");
-            x2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter y2 co-ordinate of line2 :");
-            y2 = Convert.ToDouble(Console.ReadLine());
-
-            lengthOfLine2 = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
-            Console.WriteLine("length of second line is:{0}", lengthOfLine2);
+            Console.WriteLine("For Line:2");
+            secondLine.Coordinate();
+            double lengthOfLine2 = secondLine.GetLength();
+            Console.WriteLine("Length of line2 is {0}",lengthOfLine2);
 
             LineCompare.LineComp(lengthOfLine1, lengthOfLine2);
 
+            Console.WriteLine(lengthOfLine1.CompareTo(lengthOfLine2));
             Console.ReadLine();
         }
     }

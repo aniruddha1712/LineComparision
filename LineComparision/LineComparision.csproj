@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="LineCompare.cs" />
     <Compile Include="LineComparision.cs" />
+    <Compile Include="LineCoordinate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,5 +21,12 @@ namespace LineComparision
             else
                 Console.WriteLine("Line1 is smaller than Line2");
         }
+        /*Console.WriteLine(lengthOfLine1.CompareTo(lengthOfLine2));
+        can use this in main class for getting integer value 
+        0{equal}
+        1{}
+        2{}
+        */
+
     }
 }
